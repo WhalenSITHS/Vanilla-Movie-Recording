@@ -117,9 +117,115 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/index.js":[function(require,module,exports) {
-console.log("connected");
-},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+})({"js/DOM.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.DOMSelectors = void 0;
+var DOMSelectors = {
+  grid: document.querySelector(".movie-grid")
+};
+exports.DOMSelectors = DOMSelectors;
+},{}],"js/genre.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.genres = void 0;
+var genres = [{
+  id: 28,
+  name: "Action"
+}, {
+  id: 12,
+  name: "Adventure"
+}, {
+  id: 16,
+  name: "Animation"
+}, {
+  id: 35,
+  name: "Comedy"
+}, {
+  id: 80,
+  name: "Crime"
+}, {
+  id: 99,
+  name: "Documentary"
+}, {
+  id: 18,
+  name: "Drama"
+}, {
+  id: 10751,
+  name: "Family"
+}, {
+  id: 14,
+  name: "Fantasy"
+}, {
+  id: 36,
+  name: "History"
+}, {
+  id: 27,
+  name: "Horror"
+}, {
+  id: 10402,
+  name: "Music"
+}, {
+  id: 9648,
+  name: "Mystery"
+}, {
+  id: 10749,
+  name: "Romance"
+}, {
+  id: 878,
+  name: "Science Fiction"
+}, {
+  id: 10770,
+  name: "TV Movie"
+}, {
+  id: 53,
+  name: "Thriller"
+}, {
+  id: 10752,
+  name: "War"
+}, {
+  id: 37,
+  name: "Western"
+}];
+exports.genres = genres;
+},{}],"js/index.js":[function(require,module,exports) {
+"use strict";
+
+var _DOM = require("./DOM");
+
+var _genre = require("./genre");
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+var key = "1fd276ec57b4baedacae00246e5cf4b7"; ///////
+//////CODE GOES HERRR\
+
+var query = /*#__PURE__*/function () {
+  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+    return regeneratorRuntime.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+
+  return function query() {
+    return _ref.apply(this, arguments);
+  };
+}();
+},{"./DOM":"js/DOM.js","./genre":"js/genre.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -147,7 +253,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65048" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56223" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
